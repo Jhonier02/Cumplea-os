@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Feliz Cumpleaños 💛</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2); /* FONDO BONITO */
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    color: white;
+    overflow: hidden;
+}
+
+/* DECORACIONES */
+.decoracion {
+    position: absolute;
+    top: 20%;
+    font-size: 120px;
+    opacity: 0.9;
+}
+
+.izquierda {
+    left: 20px;
+}
+
+.derecha {
+    right: 20px;
+}
+
+/* TITULO */
+h1 {
+    margin-bottom: 10px;
+}
+
+/* MENSAJE */
+.mensaje {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+/* ROSAS */
+.jardin {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 25px;
+    justify-content: center;
+}
+
+.rosa {
+    font-size: 90px;
+    animation: flotar 3s infinite ease-in-out;
+}
+
+@keyframes flotar {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* BOTÓN */
+.boton {
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: white;
+    color: #764ba2;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* CARTA */
+.carta {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+</style>
+
+</head>
+<body>
+
+<!-- DECORACIÓN LADOS -->
+<div class="decoracion izquierda">🎉</div>
+<div class="decoracion derecha">🎉</div>
+
+<h1>🎂 Feliz Cumpleaños 💛🌹</h1>
+<div class="mensaje">Para alguien muy especial ✨</div>
+
+<!-- ROSAS -->
+<div class="jardin">
+    <div class="rosa">🌹</div>
+    <div class="rosa">🌹</div>
+    <div class="rosa">🌹</div>
+    <div class="rosa">🌹</div>
+    <div class="rosa">🌹</div>
+
+    <div class="rosa">🌹</div>
+    <div class="rosa">🌹</div>
+    <div class="rosa">🌹</div>
+    <div class="rosa">🌹</div>
+    <div class="rosa">🌹</div>
+
+
+</div>
+
+<!-- BOTÓN -->
+<button class="boton" onclick="abrirCarta()">Abrir mensaje 💌</button>
+
+<!-- CARTA -->
+<div class="carta" id="carta">
+    <h2>💛 Para ti 💛</h2>
+    <p>
+Feliz cumpleaños, mi amor 🎂❤️ 
+        <br><br>
+
+Hoy no es un día cualquiera, hoy celebro la vida de la persona que más amo. Me hace muy feliz poder estar contigo en una fecha tan importante y acompañarte en este dia tan especial.
+Solo deseo que este nuevo año te traiga muchas cosas buenas, que cumplas todo lo que propones y que sigas esa mujer que conocí y de la cual me enamores .
+Gracias por dejarme ser parte de tu vida. De verdad espero que hoy sea un día bonito para ti, porque te lo mereces te amo.
+
+ 🌹  
+        <br><br>
+        Feliz cumpleaños 💛  
+    </p>
+    <button onclick="cerrarCarta()">Cerrar</button>
+</div>
+
+<script>
+function abrirCarta() {
+    document.getElementById("carta").style.display = "block";
+}
+
+function cerrarCarta() {
+    document.getElementById("carta").style.display = "none";
+}
+</script>
+
+</body>
+</html>
